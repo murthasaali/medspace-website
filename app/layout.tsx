@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-newsreader",
   display: "swap",
 });

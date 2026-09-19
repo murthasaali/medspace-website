@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden px-6 lg:px-12 pt-8 pb-20 max-w-7xl mx-auto">
@@ -25,6 +27,9 @@ export default function HeroSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
         <div className="lg:col-span-8">
+          <span className="font-code-badge text-code-badge text-terracotta-accent uppercase tracking-widest font-semibold block mb-3">
+            Clinical Intelligence, Connected
+          </span>
           <h1 className="font-headline text-headline-2xl text-forest-deep tracking-tight">
             One Knowledge Graph.<br />
             Five Healthcare <span className="italic font-headline text-terracotta-accent">Superpowers.</span>
@@ -32,16 +37,22 @@ export default function HeroSection() {
         </div>
         <div className="lg:col-span-4 flex flex-col justify-end">
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-6">
-            Connect patients, doctors, devices, and clinical records into one governed intelligence layer &mdash; with every AI decision backed by <span className="italic text-forest-deep">mathematically verifiable</span> evidence paths.
+            MedSpace AI connects clinical data, patient context, medical devices, and healthcare records into one governed intelligence layer &mdash; with every AI decision backed by <span className="italic text-forest-deep">mathematically verifiable</span> evidence paths.
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            <a className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-forest-deep text-on-primary font-label-lg text-label-lg hover:bg-primary shadow-sm transition-all gap-2 group" href="#demo">
-              <span>Request a Guided Demo</span>
+            <Link
+              className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-forest-deep text-on-primary font-label-lg text-label-lg hover:bg-primary shadow-sm transition-all gap-2 group"
+              href="#products"
+            >
+              <span>Explore Products</span>
               <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-            </a>
-            <a className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-surface-cream text-forest-deep font-label-lg text-label-lg hover:bg-surface-container transition-colors shadow-sm" href="#graph-inspector">
-              <span>Explore Knowledge Graph</span>
-            </a>
+            </Link>
+            <Link
+              className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-surface-cream text-forest-deep font-label-lg text-label-lg hover:bg-surface-container transition-colors shadow-sm border border-border-tactile"
+              href="/company/contact"
+            >
+              <span>Talk to MedSpace AI</span>
+            </Link>
           </div>
         </div>
       </div>
