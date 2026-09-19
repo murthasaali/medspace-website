@@ -1,0 +1,66 @@
+import type { Metadata } from "next";
+import { Newsreader, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "MedSpace Clinical AI — One Knowledge Graph. Five Healthcare Superpowers.",
+  description:
+    "Connect patients, doctors, devices, and clinical records into one governed intelligence layer — with every AI decision backed by mathematically verifiable evidence paths.",
+  openGraph: {
+    title: "MedSpace Clinical AI",
+    description: "Sovereign clinical knowledge graph with verifiable evidence paths.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MedSpace Clinical AI",
+    description: "Sovereign clinical knowledge graph with verifiable evidence paths.",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${plusJakarta.variable} ${spaceMono.variable}`}
+    >
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-surface-porcelain font-body text-on-surface antialiased selection:bg-secondary-container selection:text-forest-deep">
+        <Header />
+        <main className="w-full pt-28 bg-surface-porcelain">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

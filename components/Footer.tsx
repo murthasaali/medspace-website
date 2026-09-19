@@ -1,0 +1,67 @@
+export default function Footer() {
+  const footerLinks = {
+    Products: ["MedScribe Core", "VitalGraph RPM", "ClinicOps Engine", "PatientGraph 360", "ClinicalKG Node"],
+    Governance: ["Zero PHI Egress", "Audit Log Integrity", "IRB Validation", "Model Safety Sheets", "Clinician-in-Loop"],
+    Hardware: ["RPM Starter Kit", "Clinic Kiosk", "Sovereign Node", "Cellular Cuff", "NFC Scanner"],
+    Evidence: ["AUROC Benchmarks", "PhysioNet 2012", "EHR Longitudinal", "Peer-Reviewed", "Clinical Trials"],
+  };
+
+  return (
+    <footer className="w-full bg-surface-cream">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 pb-12">
+          <div className="col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-6 h-6 rounded bg-forest-deep text-on-primary flex items-center justify-center font-headline text-headline-sm">
+                M
+              </span>
+              <span className="font-headline text-headline-md text-forest-deep">MedSpace AI</span>
+            </div>
+            <p className="font-body-sm text-body-sm text-text-muted max-w-sm mb-6">
+              Tactile clinical intelligence architecture built for ambient documentation, autonomous ICD-10
+              codification, and bedside inference without cloud telemetry exposure.
+            </p>
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
+                EHR Agnostic
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
+                ONC Certified
+              </span>
+            </div>
+          </div>
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h3 className="font-label-md text-label-md text-forest-deep uppercase tracking-wider mb-4">
+                {category}
+              </h3>
+              <ul className="space-y-2.5 font-body-sm text-body-sm">
+                {links.map((link) => (
+                  <li key={link} className="text-on-surface-variant">
+                    {link}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border-tactile">
+          <p className="font-body-sm text-body-sm text-text-muted mb-4 md:mb-0">
+            &copy; 2026 MedSpace AI. All rights reserved.
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
+              HIPAA-COMPLIANT
+            </span>
+            <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
+              ISO-27001
+            </span>
+            <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
+              SOC 2 TYPE II
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

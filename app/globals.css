@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --forest-deep: #0F3E17;
+    --primary: #002708;
+    --secondary: #406840;
+    --sage-muted: #A3B18B;
+    --surface-matcha: #D9EBD7;
+    --terracotta-accent: #E07A5F;
+    --coral-alert: #EA580C;
+    --surface-porcelain: #FDFBF7;
+    --surface-cream: #FAF7F2;
+    --surface: #F5FBF4;
+  }
+}
