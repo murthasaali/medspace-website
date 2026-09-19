@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Newsreader, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -25,18 +26,37 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MedSpace Clinical AI — One Knowledge Graph. Five Healthcare Superpowers.",
+  title: "MedSpace AI | Clinical Intelligence & Healthcare AI Platform",
   description:
-    "Connect patients, doctors, devices, and clinical records into one governed intelligence layer — with every AI decision backed by mathematically verifiable evidence paths.",
+    "MedSpace AI is a healthcare technology platform connecting clinical data, patient information and medical devices through a governed clinical knowledge graph. Five products for documentation, monitoring, operations, patient engagement and enterprise intelligence.",
   openGraph: {
-    title: "MedSpace Clinical AI",
-    description: "Sovereign clinical knowledge graph with verifiable evidence paths.",
+    title: "MedSpace AI | Clinical Intelligence & Healthcare AI Platform",
+    description:
+      "Healthcare technology platform connecting clinical data through a governed knowledge graph. Clinical documentation, remote monitoring, clinic operations and enterprise intelligence.",
+    url: "https://medspace.ai",
+    siteName: "MedSpace AI",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MedSpace Clinical AI",
-    description: "Sovereign clinical knowledge graph with verifiable evidence paths.",
+    title: "MedSpace AI | Clinical Intelligence & Healthcare AI Platform",
+    description:
+      "Healthcare technology platform connecting clinical data through a governed knowledge graph.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "https://medspace.ai",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -57,6 +77,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-surface-porcelain font-body text-on-surface antialiased selection:bg-secondary-container selection:text-forest-deep">
+        <JsonLd />
         <Header />
         <main className="w-full pt-28 bg-surface-porcelain">{children}</main>
         <Footer />
