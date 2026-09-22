@@ -2,6 +2,8 @@
 
 import { useState, useCallback } from "react";
 
+const numberFormatter = new Intl.NumberFormat("en-US");
+
 export default function ROICalculator() {
   const [clinicians, setClinicians] = useState(5);
   const [visits, setVisits] = useState(20);
@@ -111,7 +113,7 @@ export default function ROICalculator() {
               Clinician Time Returned
             </span>
             <p className="font-headline text-headline-xl text-forest-deep font-bold mt-1">
-              +{results.hoursSaved.toLocaleString()} hrs
+              +{numberFormatter.format(results.hoursSaved)} hrs
             </p>
             <p className="font-body-sm text-body-sm text-text-muted mt-0.5">
               ~360 hours saved per doctor annually in charting
@@ -123,7 +125,7 @@ export default function ROICalculator() {
               Net Revenue &amp; RPM Recovery
             </span>
             <p className="font-headline text-headline-xl text-terracotta-accent font-bold mt-1">
-              ${results.revenue.toLocaleString()}
+              ${numberFormatter.format(results.revenue)}
             </p>
             <p className="font-body-sm text-body-sm text-text-muted mt-0.5">
               From CPT 99453/54 codes and rescued appointments
