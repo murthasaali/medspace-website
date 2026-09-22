@@ -175,7 +175,7 @@ export default function ClinicalArchitectureOverview() {
             <span className="font-code-badge text-[11px] text-forest-deep font-bold uppercase block mb-1">
               02 &bull; Deterministic
             </span>
-            <p className="font-headline text-headline-sm text-forest-deep mb-1">Zero Hallucinations</p>
+            <p className="font-headline text-headline-sm text-forest-deep mb-1">Source Attribution</p>
             <p className="font-body-sm text-body-sm text-text-muted">
               Every inference backed by exact node and source chunk citations.
             </p>
@@ -185,7 +185,7 @@ export default function ClinicalArchitectureOverview() {
             <span className="font-code-badge text-[11px] text-forest-deep font-bold uppercase block mb-1">
               03 &bull; Modular
             </span>
-            <p className="font-headline text-headline-sm text-forest-deep mb-1">5 Superpowers</p>
+            <p className="font-headline text-headline-sm text-forest-deep mb-1">Five Products</p>
             <p className="font-body-sm text-body-sm text-text-muted">
               Documentation, RPM, clinic operations, patient companion, and enterprise.
             </p>

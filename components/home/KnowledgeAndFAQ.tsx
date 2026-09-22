@@ -12,12 +12,12 @@ const securityTopics = [
 ];
 
 const evidenceTopics = [
-  { title: "Research Publications", desc: "Peer-reviewed multi-relational graph topology architectures." },
-  { title: "Benchmarks & Evaluation", desc: "0.83 PhysioNet mortality & 0.93 EHR decompensation AUROC." },
-  { title: "Evaluation Methodology", desc: "Zero-hallucination graph validation frameworks." },
-  { title: "Technical Papers", desc: "Span-level topological embeddings and deterministic traversals." },
-  { title: "Clinical AI Safety", desc: "Deterministic constraint checks and drug interaction rules." },
-  { title: "Knowledge Graph Methodology", desc: "Automated ICD-10, SNOMED, and LOINC semantic crosswalks." },
+  { title: "Research Publications", desc: "Multi-relational graph topology architectures for clinical data." },
+  { title: "Benchmarks & Evaluation", desc: "Published evaluation results across clinical datasets and tasks." },
+  { title: "Evaluation Methodology", desc: "Graph validation frameworks and evaluation protocols." },
+  { title: "Technical Papers", desc: "Span-level topological embeddings and graph traversal methods." },
+  { title: "Clinical AI Safety", desc: "Constraint checks and clinical decision support safeguards." },
+  { title: "Knowledge Graph Methodology", desc: "Automated ICD-10, SNOMED, and LOINC semantic normalization." },
 ];
 
 const resourceArticles = [
@@ -42,19 +42,19 @@ const resourceArticles = [
   {
     title: "Remote Patient Monitoring Explained",
     category: "OPERATIONS GUIDE",
-    desc: "Deploying cellular cuffs, continuous glucometry, and automated CPT 99453/54 billing workflows.",
+    desc: "Deploying cellular cuffs, continuous glucometry, and automated billing workflows.",
     href: "/resources/guides",
   },
   {
     title: "GraphRAG in Healthcare Environments",
     category: "TECHNICAL RESEARCH",
-    desc: "Combining graph topology with retrieval-augmented generation for zero-hallucination clinical answers.",
+    desc: "Combining graph topology with retrieval-augmented generation for clinical question answering.",
     href: "/resources/research",
   },
   {
     title: "AI Governance for Clinical Systems",
     category: "COMPLIANCE GUIDE",
-    desc: "Establishing audit-ready AI guardrails, BAA agreements, and defense-grade air-gapped security.",
+    desc: "Establishing AI governance guardrails, BAA agreements, and security protocols.",
     href: "/resources/guides",
   },
 ];
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "What is a clinical knowledge graph?",
-    a: "A clinical knowledge graph is a structured, mathematically relational representation of healthcare information that maintains persistent connections between patients, clinicians, documents, devices, medications, and clinical events. It enables contextual reasoning across disconnected healthcare data sources without hallucination.",
+    a: "A clinical knowledge graph is a structured representation of healthcare information that maintains relationships between patients, clinicians, documents, devices, medications and clinical events. It enables contextual reasoning across disconnected healthcare data sources.",
   },
   {
     q: "What products does MedSpace AI offer?",
@@ -82,15 +82,15 @@ const faqs = [
   },
   {
     q: "What is ClinicOps Graph?",
-    a: "ClinicOps Graph automates scheduling, reminder cadences, patient intake, AI-assisted communication, and operational workflows to cut clinic no-shows by up to 45% and optimize practice revenue cycles.",
+    a: "ClinicOps Graph handles scheduling, reminders, patient intake, AI-assisted communication, and operational workflows for clinics.",
   },
   {
     q: "What is PatientGraph Companion?",
-    a: "PatientGraph Companion is a patient-facing health assistant that explains medical terminology, lab results, and care instructions at a 6th-grade reading level, while helping patients manage medications and follow-up care.",
+    a: "PatientGraph Companion is a patient-facing health assistant that helps individuals understand health information, medication context and follow-up instructions.",
   },
   {
     q: "What is ClinicalKG Enterprise?",
-    a: "ClinicalKG Enterprise is a governed clinical knowledge graph platform for large health systems, hospital networks, and research enclaves, featuring multi-hop Cypher/SPARQL queries, k=25 de-identification, and air-gapped deployment.",
+    a: "ClinicalKG Enterprise is a governed clinical knowledge graph platform for healthcare organizations, research and enterprise data workflows with multi-hop queries and de-identification.",
   },
   {
     q: "How does MedSpace AI connect healthcare data?",
@@ -98,15 +98,15 @@ const faqs = [
   },
   {
     q: "Does MedSpace AI integrate with FHIR and HL7?",
-    a: "Yes. MedSpace AI provides native connectors for FHIR R4, HL7 v2, CSV, PDF OCR, BLE devices, and REST APIs, ensuring plug-and-play interoperability with Epic, Cerner, AthenaHealth, and custom EHRs.",
+    a: "Yes. MedSpace AI supports FHIR R4, HL7 v2, CSV, PDF, and REST API integrations for healthcare data exchange.",
   },
   {
     q: "Can MedSpace AI run completely on-premise or air-gapped?",
-    a: "Yes. MedSpace AI supports dedicated sovereign cloud enclaves (AWS GovCloud / Azure), hybrid models, and 100% on-premise air-gapped hardware nodes where zero patient data or telemetry ever leaves your hospital perimeter.",
+    a: "Yes. MedSpace AI supports cloud, hybrid, and on-premise/air-gapped deployment models depending on organizational data requirements.",
   },
   {
     q: "How does MedSpace AI handle sensitive healthcare information?",
-    a: "MedSpace AI enforces zero third-party cloud data egress, role-based access control, cryptographic k-anonymity (k=25), immutable audit trails, and signed Business Associate Agreements (BAAs) compliant with HIPAA and ONC standards.",
+    a: "MedSpace AI implements data governance, role-based access control, audit trails, de-identification, and configurable deployment boundaries. See the security section for details.",
   },
   {
     q: "Is MedSpace AI a medical diagnosis system?",
@@ -276,7 +276,7 @@ export default function KnowledgeAndFAQ() {
             Answers to common questions about <span className="italic text-terracotta-accent">MedSpace AI.</span>
           </h2>
           <p className="font-body-md text-body-md text-text-muted mt-3">
-            Understand how our clinical graph architecture operates, connects to existing systems, and guarantees sovereign compliance.
+            Understand how our clinical graph architecture operates and connects to existing systems.
           </p>
         </div>
 
@@ -308,13 +308,13 @@ export default function KnowledgeAndFAQ() {
               About the Company
             </span>
             <h2 className="font-headline text-headline-xl text-forest-deep">
-              Pioneering sovereign <span className="italic text-terracotta-accent">clinical intelligence.</span>
+              About <span className="italic text-terracotta-accent">MedSpace AI.</span>
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
               MedSpace AI builds healthcare technology that connects clinical data, patient context, medical devices, and operational workflows through a governed clinical knowledge graph.
             </p>
             <p className="font-body-md text-body-md text-text-muted leading-relaxed">
-              Our mission is to eliminate clinician administrative burnout and prevent clinical data fragmentation without ever compromising patient privacy or data sovereignty.
+              Our platform serves clinicians, clinics, hospitals, health systems and researchers who need structured, connected healthcare data for documentation, monitoring, operations and patient engagement.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
@@ -339,19 +339,19 @@ export default function KnowledgeAndFAQ() {
             </span>
             <div className="flex items-center gap-2.5 text-sm text-on-surface">
               <span className="material-symbols-outlined text-forest-deep text-[18px]">verified</span>
-              <span>100% Mathematical Provenance</span>
+              <span>Source-attributed clinical outputs</span>
             </div>
             <div className="flex items-center gap-2.5 text-sm text-on-surface">
               <span className="material-symbols-outlined text-forest-deep text-[18px]">verified</span>
-              <span>Zero PHI Cloud Telemetry Egress</span>
+              <span>Configurable data boundaries</span>
             </div>
             <div className="flex items-center gap-2.5 text-sm text-on-surface">
               <span className="material-symbols-outlined text-forest-deep text-[18px]">verified</span>
-              <span>Native FHIR R4 &amp; HL7 v2 Compatibility</span>
+              <span>FHIR R4 and HL7 v2 support</span>
             </div>
             <div className="flex items-center gap-2.5 text-sm text-on-surface">
               <span className="material-symbols-outlined text-forest-deep text-[18px]">verified</span>
-              <span>Transparent &amp; Auditable Clinical AI</span>
+              <span>Transparent and auditable clinical AI</span>
             </div>
           </div>
         </div>
