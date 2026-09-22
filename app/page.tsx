@@ -1,15 +1,12 @@
 import HeroSection from "@/components/HeroSection";
-import GraphTopologyPanel from "@/components/GraphTopologyPanel";
 import ClinicalArchitectureOverview from "@/components/home/ClinicalArchitectureOverview";
 import StructuralShift from "@/components/StructuralShift";
 import ProductLadder from "@/components/ProductLadder";
-import QueryInspector from "@/components/QueryInspector";
-import WorkflowsAndEnvironments from "@/components/home/WorkflowsAndEnvironments";
-import HardwareSection from "@/components/HardwareSection";
+import HowItWorks from "@/components/home/HowItWorks";
 import ROICalculator from "@/components/ROICalculator";
 import DeploymentSection from "@/components/DeploymentSection";
 import BenchmarksPanel from "@/components/BenchmarksPanel";
-import KnowledgeAndFAQ from "@/components/home/KnowledgeAndFAQ";
+import FAQAccordion from "@/components/home/FAQAccordion";
 import FinalCTA from "@/components/FinalCTA";
 
 export const metadata = {
@@ -25,13 +22,10 @@ export default function Home() {
       {/* 1. Hero */}
       <HeroSection />
 
-      {/* 2. Interactive Graph Topology Showcase */}
-      <GraphTopologyPanel />
-
-      {/* 3. Central Architecture Overview & Platform Definition */}
+      {/* 2. What is MedSpace AI — Platform definition */}
       <ClinicalArchitectureOverview />
 
-      {/* 4. The Structural Shift */}
+      {/* 3. The Structural Shift — pain-point persuasion */}
       <section className="w-full bg-surface-cream py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <StructuralShift />
@@ -45,19 +39,13 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* 5. Product Suite Ladder */}
+      {/* 4. Five Products — the navigation hub */}
       <ProductLadder />
 
-      {/* 6. Zero-Hallucination Query Inspector */}
-      <QueryInspector />
+      {/* 5. How It Works — 4-step process */}
+      <HowItWorks />
 
-      {/* 7. Clinical Process, Use Cases, Personas & Integrations */}
-      <WorkflowsAndEnvironments />
-
-      {/* 8. Bedside Hardware Integration */}
-      <HardwareSection />
-
-      {/* 9. Interactive Practice ROI Calculator */}
+      {/* 6. Interactive Practice ROI Calculator */}
       <section className="w-full bg-surface-cream py-20 px-6 lg:px-12" id="roi-calc">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-12">
@@ -77,16 +65,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. Architectural Sovereignty & Deployment Options */}
+      {/* 7. Deployment — 3-tier sovereignty */}
       <DeploymentSection />
 
-      {/* 11. Scientific Validation & Peer-Reviewed Benchmarks */}
+      {/* 8. Scientific Benchmarks + FAQ */}
       <BenchmarksPanel />
+      <FAQAccordion />
 
-      {/* 12. Security, Evidence, Resources, FAQ Accordion & About */}
-      <KnowledgeAndFAQ />
-
-      {/* 13. Final Consultation & Elevate CTA */}
+      {/* 9. Final CTA */}
       <FinalCTA />
     </div>
   );
