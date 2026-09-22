@@ -40,6 +40,11 @@ export default function HeroDefinition() {
               <span>Talk to MedSpace AI</span>
             </Link>
           </div>
+
+          {/* Medical safety disclaimer */}
+          <p className="font-body-sm text-body-sm text-text-muted mt-8 max-w-2xl border-l-2 border-sage-muted pl-4">
+            MedSpace AI is designed to support healthcare workflows and decision-making. It does not replace qualified healthcare professionals or emergency medical services.
+          </p>
         </div>
       </section>
 
@@ -49,6 +54,7 @@ export default function HeroDefinition() {
           <svg
             viewBox="0 0 1000 400"
             className="w-full h-auto"
+            role="img"
             aria-label="MedSpace AI architecture diagram showing data flowing from clinical inputs through the clinical knowledge graph to actionable outputs"
           >
             {/* ── Left side: Inputs ── */}

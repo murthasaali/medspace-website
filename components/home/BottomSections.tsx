@@ -117,19 +117,19 @@ export default function BottomSections() {
         <h2 className="font-headline text-headline-xl text-forest-deep mb-12">Frequently asked questions</h2>
         <div className="max-w-3xl space-y-4">
           {[
-            { q: "What is MedSpace AI?", a: "MedSpace AI is a healthcare technology platform that connects clinical data, patient information, medical devices and healthcare workflows through a governed clinical knowledge graph. Its five products support clinical documentation, remote patient monitoring, clinic operations, patient engagement and enterprise clinical intelligence." },
-            { q: "What is a clinical knowledge graph?", a: "A clinical knowledge graph is a structured representation of healthcare information that maintains relationships between patients, clinicians, documents, devices, medications and clinical events. It enables contextual reasoning across disconnected healthcare data sources." },
-            { q: "What products does MedSpace AI offer?", a: "MedSpace AI offers five products: MedScribe Graph (clinical documentation), VitalGraph (remote patient monitoring), ClinicOps Graph (clinic operations), PatientGraph Companion (patient engagement) and ClinicalKG Enterprise (enterprise clinical intelligence)." },
-            { q: "What is MedScribe Graph?", a: "MedScribe Graph converts clinical conversations into structured documentation and connected clinical data. It supports ambient and dictated consultation workflows with structured output and source attribution." },
-            { q: "What is VitalGraph?", a: "VitalGraph connects patient-generated and device data with clinical context to support monitoring, trend analysis and clinician review." },
-            { q: "What is ClinicOps Graph?", a: "ClinicOps Graph handles scheduling, reminders, patient intake, AI-assisted communication and operational workflows for clinics." },
-            { q: "What is PatientGraph Companion?", a: "PatientGraph Companion is a patient-facing health assistant that helps individuals understand health information, medication context and follow-up instructions." },
-            { q: "What is ClinicalKG Enterprise?", a: "ClinicalKG Enterprise is a governed clinical knowledge graph platform for healthcare organizations, research and enterprise data workflows with multi-hop queries and de-identification." },
-            { q: "How does MedSpace AI connect healthcare data?", a: "MedSpace AI normalizes healthcare data using standard terminologies (ICD-10, SNOMED, RxNorm, LOINC) and connects it within a clinical knowledge graph that maintains relationships between all entities." },
-            { q: "Does MedSpace AI integrate with FHIR and HL7?", a: "Yes. MedSpace AI supports FHIR R4, HL7 v2, CSV, PDF and REST API integrations for healthcare data exchange." },
-            { q: "Can MedSpace AI run on-premise?", a: "Yes. MedSpace AI supports cloud, hybrid and on-premise/air-gapped deployment models depending on organizational data requirements." },
-            { q: "How does MedSpace AI handle sensitive healthcare information?", a: "MedSpace AI implements data governance, role-based access control, audit trails, de-identification and configurable deployment boundaries. See /security for details." },
-            { q: "Is MedSpace AI a medical diagnosis system?", a: "No. MedSpace AI is designed to support healthcare workflows and decision-making. It does not replace qualified healthcare professionals or emergency medical services." },
+            { q: "What is MedSpace AI?", a: "MedSpace AI is a healthcare technology platform that connects clinical data, patient information, medical devices and healthcare workflows through a governed clinical knowledge graph. Its five products support clinical documentation, remote patient monitoring, clinic operations, patient engagement and enterprise clinical intelligence.", link: "/platform" },
+            { q: "What is a clinical knowledge graph?", a: "A clinical knowledge graph is a structured representation of healthcare information that maintains relationships between patients, clinicians, documents, devices, medications and clinical events. It enables contextual reasoning across disconnected healthcare data sources.", link: "/platform/clinical-knowledge-graph" },
+            { q: "What products does MedSpace AI offer?", a: "MedSpace AI offers five products: MedScribe Graph (clinical documentation), VitalGraph (remote patient monitoring), ClinicOps Graph (clinic operations), PatientGraph Companion (patient engagement) and ClinicalKG Enterprise (enterprise clinical intelligence).", link: "/products" },
+            { q: "What is MedScribe Graph?", a: "MedScribe Graph converts clinical conversations into structured documentation and connected clinical data. It supports ambient and dictated consultation workflows with structured output and source attribution.", link: "/products/medscribe" },
+            { q: "What is VitalGraph?", a: "VitalGraph connects patient-generated and device data with clinical context to support monitoring, trend analysis and clinician review.", link: "/products/vitalgraph" },
+            { q: "What is ClinicOps Graph?", a: "ClinicOps Graph handles scheduling, reminders, patient intake, AI-assisted communication and operational workflows for clinics.", link: "/products/clinicops" },
+            { q: "What is PatientGraph Companion?", a: "PatientGraph Companion is a patient-facing health assistant that helps individuals understand health information, medication context and follow-up instructions.", link: "/products/companion" },
+            { q: "What is ClinicalKG Enterprise?", a: "ClinicalKG Enterprise is a governed clinical knowledge graph platform for healthcare organizations, research and enterprise data workflows with multi-hop queries and de-identification.", link: "/products/enterprise" },
+            { q: "How does MedSpace AI connect healthcare data?", a: "MedSpace AI normalizes healthcare data using standard terminologies (ICD-10, SNOMED, RxNorm, LOINC) and connects it within a clinical knowledge graph that maintains relationships between all entities.", link: "/platform/data-normalization" },
+            { q: "Does MedSpace AI integrate with FHIR and HL7?", a: "Yes. MedSpace AI supports FHIR R4, HL7 v2, CSV, PDF and REST API integrations for healthcare data exchange.", link: "/integrations" },
+            { q: "Can MedSpace AI run on-premise?", a: "Yes. MedSpace AI supports cloud, hybrid and on-premise/air-gapped deployment models depending on organizational data requirements.", link: "/security" },
+            { q: "How does MedSpace AI handle sensitive healthcare information?", a: "MedSpace AI implements data governance, role-based access control, audit trails, de-identification and configurable deployment boundaries. See the security section for details.", link: "/security" },
+            { q: "Is MedSpace AI a medical diagnosis system?", a: "No. MedSpace AI is designed to support healthcare workflows and decision-making. It does not replace qualified healthcare professionals or emergency medical services.", link: "/evidence" },
           ].map((faq, i) => (
             <details key={i} className="group bg-surface-container-lowest rounded-xl p-5 border border-border-tactile">
               <summary className="font-headline text-headline-sm text-forest-deep cursor-pointer list-none flex items-center justify-between">
@@ -137,7 +137,10 @@ export default function BottomSections() {
                 <span className="material-symbols-outlined text-forest-deep transition-transform group-open:rotate-180">expand_more</span>
               </summary>
               <div className="font-body-md text-body-md text-on-surface-variant mt-3 pt-3 border-t border-border-tactile">
-                {faq.a}
+                <p>{faq.a}</p>
+                <Link href={faq.link} className="inline-flex items-center gap-1 mt-2 font-label-md text-label-md text-forest-deep hover:text-primary transition-colors">
+                  Learn more <span>&rarr;</span>
+                </Link>
               </div>
             </details>
           ))}

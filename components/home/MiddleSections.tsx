@@ -22,30 +22,30 @@ const useCases = [
   {
     title: "Patient Health Information",
     description: "Help patients understand health information, medications and follow-up instructions.",
-    href: "/products/patientgraph",
+    href: "/products/companion",
     anchor: "Explore PatientGraph",
   },
   {
     title: "Clinical Data Research",
     description: "Access governed clinical data for research, cohort analysis and population health.",
-    href: "/products/clinicalkg-enterprise",
+    href: "/products/enterprise",
     anchor: "Explore ClinicalKG",
   },
   {
     title: "Enterprise Healthcare Intelligence",
     description: "Connect enterprise data sources through a governed clinical knowledge graph.",
-    href: "/products/clinicalkg-enterprise",
+    href: "/products/enterprise",
     anchor: "Explore Enterprise",
   },
 ];
 
 const personas = [
-  { title: "Doctors", description: "Reduce documentation burden and focus on patient care.", href: "/industries/doctors" },
-  { title: "Clinics", description: "Streamline operations and improve patient throughput.", href: "/industries/clinics" },
-  { title: "Hospitals", description: "Coordinate care across departments and specialties.", href: "/industries/hospitals" },
-  { title: "Health Systems", description: "Connect data sources across your entire network.", href: "/industries/health-systems" },
-  { title: "Researchers", description: "Access governed clinical data for research and analysis.", href: "/industries/research" },
-  { title: "Healthcare Organizations", description: "Deploy enterprise-wide intelligence and compliance.", href: "/industries/organizations" },
+  { title: "Doctors", description: "Reduce documentation burden and focus on patient care.", href: "/for-doctors" },
+  { title: "Clinics", description: "Streamline operations and improve patient throughput.", href: "/for-clinics" },
+  { title: "Hospitals", description: "Coordinate care across departments and specialties.", href: "/for-hospitals" },
+  { title: "Health Systems", description: "Connect data sources across your entire network.", href: "/for-health-systems" },
+  { title: "Researchers", description: "Access governed clinical data for research and analysis.", href: "/for-researchers" },
+  { title: "Healthcare Organizations", description: "Deploy enterprise-wide intelligence and compliance.", href: "/for-organizations" },
 ];
 
 const industries = [
@@ -81,7 +81,7 @@ const integrationsPlanned = [
 const deployments = [
   {
     title: "Cloud",
-    description: "Fully managed deployment with automatic updates, scaling and compliance.",
+    description: "Fully managed deployment with automatic updates and scaling.",
     href: "/security",
   },
   {

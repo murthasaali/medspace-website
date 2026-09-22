@@ -53,7 +53,7 @@ export default function ProductKnowledge() {
           </Link>
 
           {/* Card 4: PatientGraph Companion */}
-          <Link href="/products/patientgraph" className="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <Link href="/products/companion" className="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
             <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-wider mb-3">Patient Experience</span>
             <h3 className="font-headline text-headline-md text-forest-deep mb-2 group-hover:text-primary transition-colors">PatientGraph Companion</h3>
             <p className="font-body-sm text-body-sm text-text-muted flex-1 mb-4">
@@ -65,7 +65,7 @@ export default function ProductKnowledge() {
           </Link>
 
           {/* Card 5: ClinicalKG Enterprise (wide) */}
-          <Link href="/products/clinicalkg-enterprise" className="group md:col-span-2 bg-surface-matcha/40 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <Link href="/products/enterprise" className="group md:col-span-2 bg-surface-matcha/40 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
             <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-wider mb-3">Enterprise Clinical Intelligence</span>
             <h3 className="font-headline text-headline-lg text-forest-deep mb-2 group-hover:text-primary transition-colors">ClinicalKG Enterprise</h3>
             <p className="font-body-md text-body-md text-on-surface-variant flex-1 mb-4 max-w-2xl">

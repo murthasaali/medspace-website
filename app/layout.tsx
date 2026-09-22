@@ -28,7 +28,7 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: "MedSpace AI | Clinical Intelligence & Healthcare AI Platform",
   description:
-    "MedSpace AI is a healthcare technology platform connecting clinical data, patient information and medical devices through a governed clinical knowledge graph. Five products for documentation, monitoring, operations, patient engagement and enterprise intelligence.",
+    "Healthcare technology platform connecting clinical data through a governed knowledge graph. Five products for documentation, monitoring, operations and intelligence.",
   openGraph: {
     title: "MedSpace AI | Clinical Intelligence & Healthcare AI Platform",
     description:

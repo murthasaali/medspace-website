@@ -62,7 +62,7 @@
     url: "https://medspace.ai",
     offers: {
       "@type": "Offer",
-      price: "0",
+      price: "",
       priceCurrency: "USD",
       description: "Contact for pricing",
     },
