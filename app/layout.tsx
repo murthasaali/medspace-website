@@ -1,16 +1,9 @@
 ﻿import type { Metadata } from "next";
-import { Newsreader, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-newsreader",
-  display: "swap",
-});
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -69,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${plusJakarta.variable} ${spaceMono.variable}`}
+      className={`${plusJakarta.variable} ${spaceMono.variable}`}
     >
       <head>
         <link
@@ -80,7 +73,7 @@ export default function RootLayout({
       <body className="bg-surface-porcelain font-body text-on-surface antialiased selection:bg-secondary-container selection:text-forest-deep">
         <JsonLd />
         <Header />
-        <main className="w-full pt-28 bg-surface-porcelain">{children}</main>
+        <main className="w-full pt-20 bg-surface-porcelain">{children}</main>
         <Footer />
       </body>
     </html>

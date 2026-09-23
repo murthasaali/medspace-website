@@ -1,83 +1,81 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { clsx } from "clsx";
+
+const features = [
+  {
+    eyebrow: "Unified Graph",
+    title: "Relational Fabric",
+    description: "Connects patients, encounters, notes, and telemetry in one auditable graph.",
+  },
+  {
+    eyebrow: "Deterministic",
+    title: "Source Attribution",
+    description: "Every inference backed by exact node and source chunk citations.",
+  },
+  {
+    eyebrow: "Modular",
+    title: "Five Products",
+    description: "Documentation, RPM, clinic operations, patient companion, and enterprise.",
+  },
+  {
+    eyebrow: "Deploy Anywhere",
+    title: "Cloud, Hybrid, On-premise",
+    description: "Flexible deployment models that respect your data boundaries.",
+  },
+];
 
 export default function ClinicalArchitectureOverview() {
   return (
-    <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="architecture">
-      {/* Eyebrow & Headline */}
-      <div className="max-w-3xl mb-12">
-        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-forest-deep font-code-badge text-code-badge mb-3">
-          <span className="w-2 h-2 rounded-full bg-terracotta-accent"></span>
-          PLATFORM FOUNDATION
-        </span>
-        <h2 className="font-headline text-headline-xl text-forest-deep tracking-tight">
-          What is <span className="italic font-headline text-terracotta-accent">MedSpace AI?</span>
+    <section className="w-full py-12 px-6 lg:px-12 max-w-7xl mx-auto" id="architecture">
+      {/* Headline */}
+      <div className="max-w-2xl mb-8">
+        <h2 className="font-body text-headline-xl text-forest-deep tracking-tight font-extralight">
+          What is <span className="font-body font-light text-terracotta-accent">MedSpace AI?</span>
         </h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mt-4">
+        <p className="font-body-md text-body-md text-on-surface-variant mt-3">
           Healthcare data is fractured across EHRs, devices, and manual notes. MedSpace AI organizes it into a single governed clinical knowledge layer — maintaining active relationships between clinicians, patients, documents, and real-time telemetry.
         </p>
       </div>
 
-      {/* Definition panel + 4 attribute cards */}
-      <div className="bg-surface-cream rounded-3xl p-8 lg:p-12 border border-border-tactile grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div className="lg:col-span-7 space-y-4">
-          <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-            MedSpace AI is a sovereign healthcare technology platform that connects clinical records, patient data, medical devices, and operational workflows through a governed clinical knowledge graph.
-          </p>
-          <p className="font-body-md text-body-md text-text-muted leading-relaxed">
-            Rather than feeding sensitive records to generic large language models, MedSpace organizes healthcare information into an authenticated topological knowledge layer. Five modular products operate seamlessly on this foundation — either independently or as a unified enterprise suite.
-          </p>
-          <div className="pt-2">
-            <Link
-              href="/platform"
-              className="inline-flex items-center gap-2 font-label-lg text-label-lg text-forest-deep hover:text-primary transition-colors group font-semibold"
-            >
-              <span>Explore the full MedSpace Platform</span>
-              <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-            </Link>
-          </div>
-        </div>
-
-        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="p-5 rounded-2xl bg-surface-container-lowest shadow-sm border border-border-tactile">
-            <span className="font-code-badge text-[11px] text-terracotta-accent font-bold uppercase block mb-1">
-              01 &bull; Unified Graph
+      {/* Compact Grid - 4 cards in a row on desktop */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {features.map((feature, i) => (
+          <motion.div
+            key={feature.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.08 }}
+            className={clsx(
+              "group relative p-5 rounded-xl",
+              "bg-surface-container-lowest shadow-sm border border-border-tactile",
+              "hover:shadow-md hover:border-terracotta-accent/30 transition-all duration-300"
+            )}
+          >
+            <span className="font-code-badge text-[10px] text-terracotta-accent font-bold uppercase block mb-2">
+              {feature.eyebrow}
             </span>
-            <p className="font-headline text-headline-sm text-forest-deep mb-1">Relational Fabric</p>
-            <p className="font-body-sm text-body-sm text-text-muted">
-              Connects patients, encounters, notes, and telemetry in one auditable graph.
+            <p className="font-headline text-headline-sm text-forest-deep mb-1.5">
+              {feature.title}
             </p>
-          </div>
+            <p className="font-body-sm text-body-sm text-text-muted leading-relaxed">
+              {feature.description}
+            </p>
+          </motion.div>
+        ))}
+      </div>
 
-          <div className="p-5 rounded-2xl bg-surface-container-lowest shadow-sm border border-border-tactile">
-            <span className="font-code-badge text-[11px] text-forest-deep font-bold uppercase block mb-1">
-              02 &bull; Deterministic
-            </span>
-            <p className="font-headline text-headline-sm text-forest-deep mb-1">Source Attribution</p>
-            <p className="font-body-sm text-body-sm text-text-muted">
-              Every inference backed by exact node and source chunk citations.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-surface-container-lowest shadow-sm border border-border-tactile">
-            <span className="font-code-badge text-[11px] text-forest-deep font-bold uppercase block mb-1">
-              03 &bull; Modular
-            </span>
-            <p className="font-headline text-headline-sm text-forest-deep mb-1">Five Products</p>
-            <p className="font-body-sm text-body-sm text-text-muted">
-              Documentation, RPM, clinic operations, patient companion, and enterprise.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-surface-container-lowest shadow-sm border border-border-tactile">
-            <span className="font-code-badge text-[11px] text-terracotta-accent font-bold uppercase block mb-1">
-              04 &bull; Sovereign
-            </span>
-            <p className="font-headline text-headline-sm text-forest-deep mb-1">Air-Gapped Ready</p>
-            <p className="font-body-sm text-body-sm text-text-muted">
-              Runs 100% on-premise or in private enclaves with zero cloud data egress.
-            </p>
-          </div>
-        </div>
+      {/* CTA */}
+      <div className="mt-6">
+        <Link
+          href="/platform"
+          className="inline-flex items-center gap-2 font-label-lg text-label-lg text-forest-deep hover:text-primary transition-colors group font-semibold"
+        >
+          <span>Explore the full MedSpace Platform</span>
+          <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+        </Link>
       </div>
     </section>
   );

@@ -40,7 +40,7 @@ const config: Config = {
         "on-error-container": "#93000A",
       },
       fontFamily: {
-        headline: ["Newsreader", "Georgia", "serif"],
+        headline: ["Plus Jakarta Sans", "sans-serif"],
         body: ["Plus Jakarta Sans", "sans-serif"],
         "code-badge": ["Space Mono", "monospace"],
       },

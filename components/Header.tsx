@@ -14,33 +14,11 @@ const navItems: NavItem[] = [
     label: "Products",
     href: "/products",
     children: [
-      { label: "MedScribe", href: "/products/medscribe" },
+      { label: "MedScribe Graph", href: "/products/medscribe" },
       { label: "VitalGraph", href: "/products/vitalgraph" },
-      { label: "ClinicOps", href: "/products/clinicops" },
-      { label: "PatientGraph", href: "/products/companion" },
+      { label: "ClinicOps Graph", href: "/products/clinicops" },
+      { label: "PatientGraph Companion", href: "/products/companion" },
       { label: "ClinicalKG Enterprise", href: "/products/enterprise" },
-    ],
-  },
-  {
-    label: "Solutions",
-    href: "/solutions",
-    children: [
-      { label: "Clinical Documentation", href: "/solutions/clinical-documentation" },
-      { label: "Remote Patient Monitoring", href: "/solutions/remote-patient-monitoring" },
-      { label: "Clinic Operations", href: "/solutions/clinic-operations" },
-      { label: "Patient Engagement", href: "/solutions/patient-engagement" },
-      { label: "Clinical Research", href: "/solutions/clinical-research" },
-    ],
-  },
-  {
-    label: "Industries",
-    href: "/industries",
-    children: [
-      { label: "Clinics", href: "/industries/clinics" },
-      { label: "Hospitals", href: "/industries/hospitals" },
-      { label: "Health Systems", href: "/industries/health-systems" },
-      { label: "Research", href: "/industries/research" },
-      { label: "Healthcare Organizations", href: "/industries/healthcare-organizations" },
     ],
   },
   {
@@ -49,43 +27,18 @@ const navItems: NavItem[] = [
     children: [
       { label: "Clinical Knowledge Graph", href: "/platform/clinical-knowledge-graph" },
       { label: "GraphRAG", href: "/platform/graphrag" },
-      { label: "AI Reasoning", href: "/platform/ai-reasoning" },
-      { label: "Evidence & Citations", href: "/platform/evidence-citations" },
       { label: "Data Normalization", href: "/platform/data-normalization" },
       { label: "APIs", href: "/platform/apis" },
     ],
   },
-  {
-    label: "Integrations",
-    href: "/integrations",
-    children: [
-      { label: "FHIR", href: "/integrations/fhir" },
-      { label: "HL7", href: "/integrations/hl7" },
-      { label: "EHR", href: "/integrations/ehr" },
-      { label: "Medical Devices", href: "/integrations/medical-devices" },
-      { label: "Communication", href: "/integrations/communication" },
-    ],
-  },
   { label: "Security", href: "/security" },
   { label: "Evidence", href: "/evidence" },
-  {
-    label: "Resources",
-    href: "/resources",
-    children: [
-      { label: "Blog", href: "/resources/blog" },
-      { label: "Research", href: "/resources/research" },
-      { label: "Case Studies", href: "/resources/case-studies" },
-      { label: "Guides", href: "/resources/guides" },
-      { label: "Documentation", href: "/resources/documentation" },
-    ],
-  },
   {
     label: "Company",
     href: "/company",
     children: [
       { label: "About", href: "/company/about" },
       { label: "Team", href: "/company/team" },
-      { label: "Careers", href: "/company/careers" },
       { label: "Contact", href: "/company/contact" },
     ],
   },
@@ -124,28 +77,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="w-full bg-surface-container-low">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-9 flex items-center justify-between text-on-surface-variant">
-          <div className="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-primary-fixed-variant font-code-badge text-code-badge font-medium">
-              SOC-2 TYPE II
-            </span>
-            <span className="font-code-badge text-code-badge text-text-muted hidden sm:inline">
-              Verified Clinical Knowledge Graph v2.4 &bull; HIPAA &amp; SOC-2 Ready &bull; Zero Cloud PHI Egress
-            </span>
-            <span className="font-code-badge text-code-badge text-text-muted sm:hidden">
-              Clinical KG v2.4 &bull; Zero PHI Egress
-            </span>
-          </div>
-          <div className="flex items-center gap-3 shrink-0">
-            <span className="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
-              <span className="w-1.5 h-1.5 rounded-full bg-terracotta-accent"></span>
-              Air-Gapped Node Online
-            </span>
-          </div>
-        </div>
-      </div>
-
       <nav
         className={`bg-surface-cream/95 backdrop-blur-md transition-shadow duration-200 ${
           scrolled ? "shadow-md" : "shadow-sm"
@@ -237,7 +168,7 @@ export default function Header() {
       </nav>
 
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-[calc(theme(spacing.9)+theme(spacing.20))] z-40 bg-surface-cream overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-[theme(spacing.20)] z-40 bg-surface-cream overflow-y-auto">
           <div className="px-4 py-6 space-y-1">
             {navItems.map((item) => (
               <MobileNavItem
