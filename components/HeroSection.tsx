@@ -4,24 +4,13 @@ import { ShaderBackground } from "@/components/ui/shader-r";
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden h-screen flex items-end bg-surface-porcelain">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-contain"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      <ShaderBackground className="absolute inset-0 h-full w-full" />
 
-      {/* Corner gradient - white to transparent from bottom-left */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-surface-porcelain/90 via-surface-porcelain/40 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-forest-deep/35 pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 w-full px-6 lg:px-12 pb-16 lg:pb-24 max-w-7xl mx-auto">
-        <h1 className="font-body text-headline-2xl text-forest-deep tracking-tight mb-6 font-extralight">
+        <h1 className="font-body text-headline-2xl text-white tracking-tight mb-6 font-extralight">
           Where clinical data becomes<br />
           <span className="font-body font-light text-terracotta-accent">clinical action.</span>
         </h1>

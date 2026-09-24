@@ -230,7 +230,7 @@ export const ServiceCard = ({ service, index }: { service: Service; index: numbe
     <motion.div
       variants={cardVariants}
       className={cn(
-        "relative flex h-[450px] w-full flex-col justify-between overflow-hidden rounded-3xl p-8",
+        "relative flex h-full w-full flex-col justify-between overflow-hidden rounded-3xl p-8",
         service.gradient
       )}
     >

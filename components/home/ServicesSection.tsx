@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect, type CSSProperties } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { ServiceCard, type Service } from "@/components/ui/services-card";
 import { Activity, Heart, Stethoscope, Brain, Shield, BarChart3 } from "lucide-react";
@@ -55,22 +55,21 @@ const medspaceServices: Service[] = [
   },
 ];
 
-const cssVars = {
-  "--card-width": "380px",
-  "--card-gap": "24px",
-} as CSSProperties;
+const CARD_WIDTH = 380;
+const CARD_GAP = 24;
+const LEAD_PAD_DESKTOP = 48;
 
 export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
   const [maxShift, setMaxShift] = useState(0);
 
   useEffect(() => {
     const measure = () => {
-      if (!trackRef.current) return;
-      const viewport = typeof window !== "undefined" ? window.innerWidth : 0;
-      const track = trackRef.current.scrollWidth;
-      setMaxShift(Math.max(0, track + viewport * 0.2 - viewport));
+      if (typeof window === "undefined") return;
+      const viewport = window.innerWidth;
+      const trackWidth = medspaceServices.length * CARD_WIDTH + (medspaceServices.length - 1) * CARD_GAP;
+      const rightGap = viewport * 0.08;
+      setMaxShift(Math.max(0, trackWidth + LEAD_PAD_DESKTOP - (viewport - rightGap)));
     };
     measure();
     const t = window.setTimeout(measure, 300);
@@ -86,22 +85,24 @@ export default function ServicesSection() {
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(
-    useSpring(scrollYProgress, { stiffness: 100, damping: 30, mass: 0.5 }),
-    [0.05, 0.95],
-    [0, -maxShift],
-  );
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 400,
+    damping: 50,
+    mass: 0.2,
+    restDelta: 0.00005,
+  });
+
+  const x = useTransform(smoothProgress, [0.05, 0.95], [0, -maxShift]);
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-[300vh] bg-surface-porcelain"
-      style={cssVars}
+      className="relative h-[300vh] overflow-hidden bg-surface-porcelain"
       id="services"
     >
-      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="max-w-3xl mb-10 px-6 lg:px-12">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 pt-12 lg:pt-16 shrink-0">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-forest-deep font-code-badge text-code-badge mb-3">
             <span className="w-2 h-2 rounded-full bg-terracotta-accent"></span>
             PRODUCT SUITE
@@ -114,24 +115,25 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Horizontal scroll strip */}
-        <motion.div
-          ref={trackRef}
-          style={{ x }}
-          className="flex w-max pl-6 lg:pl-12 pr-[10vw] will-change-transform"
-        >
-          {medspaceServices.map((service, i) => (
-            <div
-              key={service.title}
-              className="shrink-0"
-              style={{ width: "var(--card-width)", marginRight: "var(--card-gap)" }}
-            >
-              <div className="p-1">
-                <ServiceCard service={service} index={i} />
+        {/* Horizontal scroll strip — fills the rest of the viewport, no empty space */}
+        <div className="min-h-0 flex-1 flex items-center">
+          <motion.div
+            style={{ x }}
+            className="flex w-max items-stretch will-change-transform h-full pl-6 lg:pl-12 pr-[8vw]"
+          >
+            {medspaceServices.map((service, i) => (
+              <div
+                key={service.title}
+                className="shrink-0 h-full"
+                style={{ width: CARD_WIDTH, marginRight: i < medspaceServices.length - 1 ? CARD_GAP : 0 }}
+              >
+                <div className="p-1.5 h-full">
+                  <ServiceCard service={service} index={i} />
+                </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

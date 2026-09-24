@@ -30,8 +30,8 @@ export default function Home() {
       <FoundationShowcase />
 
       {/* 3. The Structural Shift — pain-point persuasion */}
-      <section className="w-full bg-surface-cream py-20 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-surface-cream py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <StructuralShift />
         </div>
       </section>

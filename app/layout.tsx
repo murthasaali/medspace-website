@@ -73,7 +73,7 @@ export default function RootLayout({
       <body className="bg-surface-porcelain font-body text-on-surface antialiased selection:bg-secondary-container selection:text-forest-deep">
         <JsonLd />
         <Header />
-        <main className="w-full pt-20 bg-surface-porcelain">{children}</main>
+        <main className="w-full bg-surface-porcelain">{children}</main>
         <Footer />
       </body>
     </html>
