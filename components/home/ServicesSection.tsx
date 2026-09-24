@@ -49,7 +49,7 @@ const medspaceServices: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="services">
+    <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="services">
       <div className="max-w-3xl mb-12">
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-forest-deep font-code-badge text-code-badge mb-3">
           <span className="w-2 h-2 rounded-full bg-terracotta-accent"></span>

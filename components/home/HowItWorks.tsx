@@ -27,7 +27,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="how-it-works">
+    <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="how-it-works">
       <div className="max-w-3xl mb-12">
         <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
           Clinical Process

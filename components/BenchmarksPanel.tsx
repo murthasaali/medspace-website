@@ -1,6 +1,6 @@
-﻿export default function BenchmarksPanel() {
+export default function BenchmarksPanel() {
   return (
-    <section className="w-full py-20 px-6 lg:px-12 max-w-7xl mx-auto">
+    <section className="w-full py-20 px-6 lg:px-12 max-w-8xl mx-auto">
       <div className="bg-forest-deep text-on-primary rounded-3xl p-8 lg:p-12 shadow-xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6">

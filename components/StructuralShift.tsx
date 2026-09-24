@@ -1,4 +1,4 @@
-﻿export default function StructuralShift() {
+export default function StructuralShift() {
   return (
     <>
       <div className="max-w-3xl mb-10">

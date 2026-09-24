@@ -1,6 +1,6 @@
-﻿export default function HardwareSection() {
+export default function HardwareSection() {
   return (
-    <section className="w-full py-20 px-6 lg:px-12 max-w-7xl mx-auto" id="hardware">
+    <section className="w-full py-20 px-6 lg:px-12 max-w-8xl mx-auto" id="hardware">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
         <div>
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">Physical Clinical Integration</span>

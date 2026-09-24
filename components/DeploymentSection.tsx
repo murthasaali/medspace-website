@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function DeploymentSection() {
   return (
-    <section className="w-full py-20 px-6 lg:px-12 max-w-7xl mx-auto" id="deployment">
+    <section className="w-full py-20 px-6 lg:px-12 max-w-8xl mx-auto" id="deployment">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">Architectural Sovereignty</span>
         <h2 className="font-headline text-headline-xl text-forest-deep">

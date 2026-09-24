@@ -9,8 +9,10 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "ClinicalKG Enterprise", href: "/products/clinicalkg-enterprise" },
   ],
   Platform: [
+    { label: "Technology", href: "/technology" },
     { label: "Clinical Knowledge Graph", href: "/platform/clinical-knowledge-graph" },
     { label: "GraphRAG", href: "/platform/graphrag" },
+    { label: "Hardware", href: "/hardware" },
     { label: "Integrations", href: "/integrations/fhir" },
     { label: "Security", href: "/security" },
     { label: "Deployment", href: "/platform/ai-reasoning" },
@@ -34,7 +36,7 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
 export default function Footer() {
   return (
     <footer className="w-full bg-surface-cream">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+      <div className="max-w-8xl mx-auto px-6 lg:px-12 pt-16 pb-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 pb-12">
           {/* Brand column */}
           <div className="col-span-2">

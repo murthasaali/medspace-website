@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export const metadata = {
   title: "ClinicalKG Enterprise | MedSpace AI",
@@ -8,7 +8,7 @@ export const metadata = {
 export default function ClinicalKGEnterprisePage() {
   return (
     <div className="min-h-screen bg-surface-porcelain">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+      <div className="max-w-8xl mx-auto px-6 lg:px-12 py-20">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-forest-deep mb-8 transition-colors">
           <span>&larr;</span>
           <span>Back to Home</span>

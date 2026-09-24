@@ -118,7 +118,7 @@ export default function KnowledgeAndFAQ() {
   return (
     <>
       {/* ─── SECURITY & TRUST ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="security">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="security">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Governance &amp; Trust
@@ -163,7 +163,7 @@ export default function KnowledgeAndFAQ() {
       </section>
 
       {/* ─── EVIDENCE & RESEARCH ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto bg-surface-cream rounded-3xl border border-border-tactile" id="evidence">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto bg-surface-cream rounded-3xl border border-border-tactile" id="evidence">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Clinical Rigor
@@ -214,7 +214,7 @@ export default function KnowledgeAndFAQ() {
       </section>
 
       {/* ─── RESOURCES & GUIDES ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="resources">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="resources">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Knowledge Base
@@ -267,7 +267,7 @@ export default function KnowledgeAndFAQ() {
       </section>
 
       {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="faq">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="faq">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Frequently Asked Questions
@@ -301,7 +301,7 @@ export default function KnowledgeAndFAQ() {
       </section>
 
       {/* ─── ABOUT MEDSPACE AI (COMPANY) ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto bg-surface-cream rounded-3xl border border-border-tactile mb-16" id="about">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto bg-surface-cream rounded-3xl border border-border-tactile mb-16" id="about">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-4">
             <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block">

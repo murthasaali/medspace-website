@@ -146,7 +146,7 @@ export default function WorkflowsAndEnvironments() {
   return (
     <>
       {/* ─── HOW IT WORKS (PROCESS) ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="how-it-works">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="how-it-works">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Clinical Process
@@ -192,7 +192,7 @@ export default function WorkflowsAndEnvironments() {
       </section>
 
       {/* ─── USE CASES (HEALTHCARE WORKFLOWS) ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="use-cases">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="use-cases">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Targeted Workflows
@@ -237,7 +237,7 @@ export default function WorkflowsAndEnvironments() {
       </section>
 
       {/* ─── PERSONAS & HEALTHCARE ENVIRONMENTS ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto bg-surface-cream rounded-3xl border border-border-tactile" id="who">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto bg-surface-cream rounded-3xl border border-border-tactile" id="who">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Clinical Stakeholders
@@ -296,7 +296,7 @@ export default function WorkflowsAndEnvironments() {
       </section>
 
       {/* ─── SYSTEM INTEGRATIONS ─── */}
-      <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="integrations">
+      <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="integrations">
         <div className="max-w-3xl mb-12">
           <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
             Interoperability

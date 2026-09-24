@@ -1,6 +1,6 @@
 export default function GraphTopologyPanel() {
   return (
-    <section className="relative w-full px-6 lg:px-12 max-w-7xl mx-auto">
+    <section className="relative w-full px-6 lg:px-12 max-w-8xl mx-auto">
       <div className="relative w-full rounded-3xl bg-surface-container-low p-6 md:p-10 shadow-md overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-surface-matcha/20 via-transparent to-surface-container/50 pointer-events-none"></div>
         <div className="relative z-10 flex flex-col gap-6">

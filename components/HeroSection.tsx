@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-tr from-surface-porcelain/90 via-surface-porcelain/40 to-transparent pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 lg:px-12 pb-16 lg:pb-24 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full px-6 lg:px-12 pb-16 lg:pb-24 max-w-8xl mx-auto">
         <h1 className="font-body text-headline-2xl text-forest-deep tracking-tight mb-6 font-extralight">
           Where clinical data becomes<br />
           <span className="font-body font-light text-terracotta-accent">clinical action.</span>

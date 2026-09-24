@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -82,7 +82,7 @@ export default function Header() {
           scrolled ? "shadow-md" : "shadow-sm"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+        <div className="max-w-8xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
           <div className="flex items-center gap-8 lg:gap-12">
             <Link href="/" className="flex items-center gap-2.5 shrink-0">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-forest-deep text-on-primary font-headline text-xl font-bold">

@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 export default function QueryInspector() {
   return (
     <section className="w-full bg-surface-cream py-20 px-6 lg:px-12" id="graph-inspector">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-forest-deep font-code-badge text-code-badge mb-3">
             VERITASGRAPH&trade; ZERO-HALLUCINATION MOAT

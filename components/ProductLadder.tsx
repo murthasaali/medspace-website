@@ -54,7 +54,7 @@ const sovereignFeatures = [
 
 export default function ProductLadder() {
   return (
-    <section className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="products">
+    <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="products">
       <div className="mb-12">
         <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">
           Integrated Platform

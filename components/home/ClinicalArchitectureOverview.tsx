@@ -28,9 +28,9 @@ const features = [
 
 export default function ClinicalArchitectureOverview() {
   return (
-    <section className="w-full py-12 px-6 lg:px-12 max-w-7xl mx-auto" id="architecture">
+    <section className="w-full py-16 px-6 lg:px-12 max-w-8xl mx-auto" id="architecture">
       {/* Headline */}
-      <div className="max-w-2xl mb-8">
+      <div className="max-w-3xl mb-10">
         <h2 className="font-body text-headline-xl text-forest-deep tracking-tight font-extralight">
           What is <span className="font-body font-light text-terracotta-accent">MedSpace AI?</span>
         </h2>
@@ -49,7 +49,7 @@ export default function ClinicalArchitectureOverview() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
             className={clsx(
-              "group relative p-5 rounded-xl",
+              "group relative p-6 rounded-xl",
               "bg-surface-container-lowest shadow-sm border border-border-tactile",
               "hover:shadow-md hover:border-terracotta-accent/30 transition-all duration-300"
             )}
@@ -68,10 +68,10 @@ export default function ClinicalArchitectureOverview() {
       </div>
 
       {/* CTA */}
-      <div className="mt-6">
+      <div className="mt-8">
         <Link
           href="/platform"
-          className="inline-flex items-center gap-2 font-label-lg text-label-lg text-forest-deep hover:text-primary transition-colors group font-semibold"
+          className="link-ember-underline inline-flex items-center gap-2 font-label-lg text-label-lg text-forest-deep hover:text-primary transition-colors group font-semibold"
         >
           <span>Explore the full MedSpace Platform</span>
           <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="w-full pb-24 px-6 lg:px-12 max-w-7xl mx-auto" id="demo">
+    <section className="w-full pb-24 px-6 lg:px-12 max-w-8xl mx-auto" id="demo">
       <div className="bg-surface-matcha/50 rounded-3xl p-8 lg:p-16 relative overflow-hidden shadow-sm border border-border-tactile">
         <div className="absolute -right-20 -bottom-20 w-96 h-96 opacity-25 pointer-events-none">
           <svg className="w-full h-full stroke-forest-deep fill-none" strokeWidth="1.2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@ export default function FinalCTA() {
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
             Tell us about the clinical, operational, or data workflow you are working to modernize. Join healthcare leaders reclaiming 2+ hours daily, eliminating billing leaks, and maintaining absolute data sovereignty.
           </p>
-          <div className="flex flex-wrap items-center gap-4 mb-10">
+          <div className="flex flex-wrap items-center gap-4 mb-4">
             <Link
               className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-forest-deep text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-md gap-2 group"
               href="/company/contact"
@@ -36,6 +36,16 @@ export default function FinalCTA() {
               href="/platform"
             >
               <span>Explore the Platform</span>
+            </Link>
+          </div>
+
+          <div className="mb-8">
+            <Link
+              href="/technology"
+              className="link-ember-underline text-graphite font-body-sm text-sm font-medium inline-flex items-center gap-1.5"
+            >
+              <span>Review on-premise air-gapped deployment architecture</span>
+              <span className="text-xs">&rarr;</span>
             </Link>
           </div>
           <div className="flex flex-wrap items-center gap-6 pt-6 text-on-surface-variant font-code-badge text-code-badge">
