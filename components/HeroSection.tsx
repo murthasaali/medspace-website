@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ShaderBackground } from "@/components/ui/shader-r";
 
 export default function HeroSection() {
   return (
@@ -41,9 +42,14 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        <p className="font-body-sm text-sm text-white bg-forest-deep/90 backdrop-blur-sm rounded-lg px-4 py-3 max-w-xl">
-          MedSpace AI is designed to support healthcare workflows and decision-making. It does not replace qualified healthcare professionals or emergency medical services.
-        </p>
+        <div className="relative overflow-hidden rounded-lg max-w-2xl">
+          <div className="absolute inset-0">
+            <ShaderBackground />
+          </div>
+          <p className="relative z-10 font-body-md text-lg text-white px-4 py-3">
+            MedSpace AI is designed to support healthcare workflows and decision-making. It does not replace qualified healthcare professionals or emergency medical services.
+          </p>
+        </div>
       </div>
     </section>
   );

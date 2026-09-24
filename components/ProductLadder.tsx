@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { GradientOrb } from "@/components/ui/gradient-orb";
 
 const products = [
   {
@@ -125,9 +126,20 @@ export default function ProductLadder() {
 
         <Link
           href="/products/clinicalkg-enterprise"
-          className="group col-span-1 md:col-span-2 lg:col-span-2 bg-surface-matcha/40 p-8 rounded-3xl shadow-sm flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all"
+          className="group col-span-1 md:col-span-2 lg:col-span-2 relative overflow-hidden p-8 rounded-3xl shadow-sm flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all"
         >
-          <div>
+          <div className="absolute inset-0">
+            <GradientOrb
+              config={{
+                background: "#0e2a14",
+                hue: 140,
+                rotationSpeed: 0.3,
+                noiseScale: 0.6,
+                innerRadius: 0.2,
+              }}
+            />
+          </div>
+          <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
               <span className="w-10 h-10 rounded-xl bg-surface-matcha flex items-center justify-center text-forest-deep group-hover:scale-105 transition-transform">
                 <span className="material-symbols-outlined text-[22px]">
@@ -138,10 +150,10 @@ export default function ProductLadder() {
                 HOSPITALS & RESEARCH
               </span>
             </div>
-            <h3 className="font-headline text-headline-lg text-forest-deep group-hover:text-primary transition-colors mb-2">
+            <h3 className="font-headline text-headline-lg text-white group-hover:text-primary transition-colors mb-2">
               ClinicalKG Enterprise &bull; Sovereign Node
             </h3>
-            <p className="font-body-lg text-body-lg text-text-muted max-w-xl mb-6">
+            <p className="font-body-lg text-body-lg text-white/80 max-w-xl mb-6">
               On-premise deployment for health systems requiring full data
               sovereignty with institutional knowledge graph capabilities, multi-hop queries, and guaranteed de-identification.
             </p>
@@ -149,19 +161,19 @@ export default function ProductLadder() {
               {sovereignFeatures.map((feature) => (
                 <div
                   key={feature.label}
-                  className="p-3.5 rounded-2xl bg-surface-matcha/60"
+                  className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-sm ring-1 ring-white/10"
                 >
-                  <span className="font-code-badge text-code-badge text-forest-deep block mb-1">
+                  <span className="font-code-badge text-code-badge text-white/70 block mb-1">
                     {feature.label}
                   </span>
-                  <span className="font-body-sm text-body-sm text-on-surface font-semibold">
+                  <span className="font-body-sm text-body-sm text-white font-semibold">
                     {feature.value}
                   </span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="pt-4 flex items-center justify-between text-forest-deep group-hover:text-primary">
+          <div className="relative z-10 pt-4 flex items-center justify-between text-white group-hover:text-primary">
             <span className="font-label-md text-label-md font-semibold">
               Explore ClinicalKG Enterprise
             </span>
