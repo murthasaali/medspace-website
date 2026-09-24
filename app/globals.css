@@ -40,4 +40,8 @@ html {
     --surface-cream: #FAF7F2;
     --surface: #F5FBF4;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif !important;
+  }
 }

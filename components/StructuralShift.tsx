@@ -1,7 +1,7 @@
 ﻿export default function StructuralShift() {
   return (
     <>
-      <div className="max-w-3xl mb-12">
+      <div className="max-w-3xl mb-10">
         <span className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-forest-deep font-code-badge text-code-badge mb-3">
           THE STRUCTURAL SHIFT
         </span>
@@ -10,75 +10,34 @@
           <span className="italic font-headline text-terracotta-accent">mathematically grounded</span> graph.
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-sm relative overflow-hidden flex flex-col justify-between">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-terracotta-accent/5 rounded-bl-full pointer-events-none"></div>
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-error-container text-on-error-container font-code-badge text-code-badge mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-coral-alert"></span>
-              FRAGMENTED STATUS QUO
-            </div>
-            <h3 className="font-headline text-headline-lg text-on-surface mb-3">The Multi-Silo Tax</h3>
-            <p className="font-body-md text-body-md text-text-muted mb-6">
-              Clinicians waste 12+ hours weekly context-switching between decoupled EHR notes, disconnected cellular
-              RPM dashboards, faxed PDF lab panels, and isolated phone voice mails.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
-                <span className="font-body-sm text-body-sm text-on-surface">Unstructured Ambient Audio</span>
-                <span className="font-code-badge text-[11px] text-coral-alert">No Provenance</span>
-              </div>
-              <div className="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
-                <span className="font-body-sm text-body-sm text-on-surface">Orphaned Cellular RPM Feeds</span>
-                <span className="font-code-badge text-[11px] text-coral-alert">Isolated Telemetry</span>
-              </div>
-              <div className="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
-                <span className="font-body-sm text-body-sm text-on-surface">Legacy Billing &amp; Coding Engine</span>
-                <span className="font-code-badge text-[11px] text-coral-alert">15% Denial Leakage</span>
-              </div>
-            </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Before */}
+        <div className="p-6 rounded-xl bg-surface-container-lowest border border-border-tactile">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-error-container/50 text-coral-alert font-code-badge text-code-badge mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-coral-alert"></span>
+            FRAGMENTED
           </div>
-          <div className="pt-4 bg-surface-container-low/50 -mx-8 -mb-8 p-6">
-            <span className="font-body-sm text-body-sm text-coral-alert font-semibold block">Risk Profile:</span>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
-              High hallucination hazard when piping unanchored documents into generic LLMs without graph traversal.
-            </p>
-          </div>
+          <ul className="space-y-3 text-text-muted font-body-sm">
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-coral-alert flex-shrink-0"></span>EHR notes decoupled from RPM dashboards</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-coral-alert flex-shrink-0"></span>Faxed PDFs, voice mails, manual entry</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-coral-alert flex-shrink-0"></span>12+ hrs/week lost to context-switching</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-coral-alert flex-shrink-0"></span>Unanchored LLM = hallucination risk</li>
+          </ul>
         </div>
 
-        <div className="bg-surface-matcha/30 p-8 rounded-3xl shadow-sm relative overflow-hidden flex flex-col justify-between">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-container/30 rounded-bl-full pointer-events-none"></div>
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-forest-deep font-code-badge text-code-badge mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-forest-deep"></span>
-              VERITASGRAPH UNIFIED ARCHITECTURE
-            </div>
-            <h3 className="font-headline text-headline-lg text-forest-deep mb-3">Governed Intelligence Fabric</h3>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-              A unified multi-relational clinical graph that mathematically binds bedside conversations, hardware
-              vitals, and billing codes with zero third-party cloud data egress.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="p-3 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
-                <span className="font-body-sm text-body-sm font-medium text-forest-deep">Sub-second Cross Validation</span>
-                <span className="font-code-badge text-[11px] text-forest-deep font-bold">100% Verified</span>
-              </div>
-              <div className="p-3 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
-                <span className="font-body-sm text-body-sm font-medium text-forest-deep">Automated CPT &amp; ICD-10 Crosswalk</span>
-                <span className="font-code-badge text-[11px] text-forest-deep font-bold">Audit-Ready</span>
-              </div>
-              <div className="p-3 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
-                <span className="font-body-sm text-body-sm font-medium text-forest-deep">Air-Gapped Sovereign Node</span>
-                <span className="font-code-badge text-[11px] text-terracotta-accent font-bold">Zero Telemetry Egress</span>
-              </div>
-            </div>
+        {/* After */}
+        <div className="p-6 rounded-xl bg-surface-container-lowest border border-terracotta-accent/20 bg-terracotta-accent/5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-terracotta-accent/20 text-terracotta-accent font-code-badge text-code-badge mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-terracotta-accent"></span>
+            VERITASGRAPH
           </div>
-          <div className="pt-4 bg-secondary-container/40 -mx-8 -mb-8 p-6">
-            <span className="font-body-sm text-body-sm text-forest-deep font-bold block">Deterministic Safety:</span>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
-              Every clinical answer is accompanied by an exact graph span vector and source chunk citation.
-            </p>
-          </div>
+          <ul className="space-y-3 text-forest-deep font-body-sm">
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-forest-deep flex-shrink-0"></span>One graph: notes, vitals, billing, patients</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-forest-deep flex-shrink-0"></span>Every answer has exact source citation</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-forest-deep flex-shrink-0"></span>Sub-second cross-validation</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-forest-deep flex-shrink-0"></span>Air-gapped ready, zero cloud egress</li>
+          </ul>
         </div>
       </div>
     </>
