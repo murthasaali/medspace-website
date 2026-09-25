@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { clsx } from "clsx";
@@ -37,6 +38,18 @@ export default function ClinicalArchitectureOverview() {
         <p className="font-body-md text-body-md text-on-surface-variant mt-3">
           Healthcare data is fractured across EHRs, devices, and manual notes. MedSpace AI organizes it into a single governed clinical knowledge layer — maintaining active relationships between clinicians, patients, documents, and real-time telemetry.
         </p>
+      </div>
+
+      {/* Image */}
+      <div className="relative w-full max-w-[70%] mt-4 mb-2">
+        <Image
+          src="/medspace_clinical_graph_transparent.png"
+          alt="MedSpace AI clinical knowledge graph"
+          width={1615}
+          height={974}
+          priority
+          className="w-full h-auto"
+        />
       </div>
 
       {/* Compact Grid - 4 cards in a row on desktop */}
