@@ -4,7 +4,6 @@ export default function DeploymentSection() {
   return (
     <section className="w-full py-20 px-6 lg:px-12 max-w-8xl mx-auto" id="deployment">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <span className="font-code-badge text-code-badge text-text-muted uppercase tracking-widest block mb-2">Architectural Sovereignty</span>
         <h2 className="font-headline text-headline-xl text-forest-deep">
           Deploy in Your Private Enclave. <span className="italic text-terracotta-accent">Zero Telemetry Leaks.</span>
         </h2>
@@ -16,7 +15,6 @@ export default function DeploymentSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-border-tactile flex flex-col justify-between">
           <div>
-            <span className="font-code-badge text-[11px] px-2.5 py-1 rounded bg-surface-container text-text-muted block w-max mb-4">TIER 1 &bull; RAPID ONBOARDING</span>
             <h3 className="font-headline text-headline-md text-forest-deep mb-2">Managed Sovereign Cloud</h3>
             <p className="font-body-sm text-body-sm text-text-muted mb-6">
               Dedicated single-tenant AWS GovCloud or Azure for Healthcare instance with customer-managed KMS encryption keys.
@@ -40,7 +38,6 @@ export default function DeploymentSection() {
 
         <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-border-tactile flex flex-col justify-between">
           <div>
-            <span className="font-code-badge text-[11px] px-2.5 py-1 rounded bg-secondary-container text-forest-deep block w-max mb-4 font-bold">TIER 2 &bull; HYBRID PRIVACY</span>
             <h3 className="font-headline text-headline-md text-forest-deep mb-2">Local PHI + Cloud Reasoning</h3>
             <p className="font-body-sm text-body-sm text-text-muted mb-6">
               All PHI is scrubbed and de-identified locally before cryptographic embeddings are passed to private sovereign models.
@@ -64,7 +61,6 @@ export default function DeploymentSection() {
 
         <div className="bg-surface-matcha/40 p-8 rounded-3xl shadow-sm border border-border-tactile flex flex-col justify-between">
           <div>
-            <span className="font-code-badge text-[11px] px-2.5 py-1 rounded bg-forest-deep text-on-primary block w-max mb-4 font-bold">TIER 3 &bull; TOTAL AIR-GAP</span>
             <h3 className="font-headline text-headline-md text-forest-deep mb-2">Air-Gapped Sovereign Node</h3>
             <p className="font-body-sm text-body-sm text-on-surface-variant mb-6">
               100% on-premise hardware appliances. Zero internet connection required for live ambient transcription and knowledge graph navigation.

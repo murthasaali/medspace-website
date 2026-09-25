@@ -210,9 +210,10 @@ export interface Service {
   description: string;
   icon: React.ElementType;
   gradient: string;
+  image?: string;
 }
 
-const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
+export const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -229,23 +230,28 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
     <motion.div
       variants={cardVariants}
       className={cn(
-        "relative flex h-[450px] w-full flex-col justify-between overflow-hidden rounded-3xl p-8 bg-gradient-to-r",
+        "relative flex h-full w-full flex-col justify-between overflow-hidden rounded-3xl p-8",
         service.gradient
       )}
     >
-      <div className="z-10 flex flex-col items-start text-left">
-        <span className="mb-8 text-sm font-mono text-foreground/50">
-          ( {service.number} )
-        </span>
-        <service.icon className="mb-auto h-12 w-12 text-foreground" />
+      {service.image && (
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${service.image})` }}
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+      <div className="relative z-10 flex flex-col items-start text-left">
+        <div className="mb-auto flex h-12 w-12 items-center justify-center rounded-xl bg-white p-2.5 shadow-lg">
+          <service.icon className="h-full w-full text-[#E07A5F]" />
+        </div>
       </div>
-      <div className="z-10">
-        <h3 className="mb-2 text-lg font-semibold uppercase tracking-wider">
+      <div className="relative z-10">
+        <h3 className="mb-2 text-lg font-semibold uppercase tracking-wider text-white">
           {service.title}
         </h3>
-        <p className="text-sm text-foreground/70">{service.description}</p>
+        <p className="text-sm text-white/80">{service.description}</p>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
     </motion.div>
   );
 };

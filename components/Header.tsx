@@ -78,8 +78,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav
-        className={`bg-surface-cream/95 backdrop-blur-md transition-shadow duration-200 ${
-          scrolled ? "shadow-md" : "shadow-sm"
+        className={`transition-colors duration-200 ${
+          scrolled
+            ? "border-b border-forest-deep/10 bg-surface-cream/95 shadow-md backdrop-blur-md"
+            : "border-b border-transparent bg-transparent shadow-none"
         }`}
       >
         <div className="max-w-8xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
@@ -168,7 +170,7 @@ export default function Header() {
       </nav>
 
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-[theme(spacing.20)] z-40 bg-surface-cream overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-[76px] z-40 bg-surface-cream overflow-y-auto">
           <div className="px-4 py-6 space-y-1">
             {navItems.map((item) => (
               <MobileNavItem

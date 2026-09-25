@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import PartnerTrustStrip from "@/components/home/PartnerTrustStrip";
 import ClinicalArchitectureOverview from "@/components/home/ClinicalArchitectureOverview";
 import StructuralShift from "@/components/StructuralShift";
+import FoundationShowcase from "@/components/FoundationShowcase";
 import ProductLadder from "@/components/ProductLadder";
 import ServicesSection from "@/components/home/ServicesSection";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -34,6 +35,11 @@ export default function Home() {
       {/* 3. What is MedSpace AI — Platform definition */}
       <div className="reveal-on-scroll">
         <ClinicalArchitectureOverview />
+      </div>
+
+      {/* 3b. 3D Infrastructure Showcase */}
+      <div className="reveal-on-scroll">
+        <FoundationShowcase />
       </div>
 
       {/* 4. The Structural Shift — pain-point persuasion */}

@@ -83,23 +83,11 @@ export default function Footer() {
             </div>
           ))}
         </div>
-
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border-tactile">
           <p className="font-body-sm text-body-sm text-text-muted mb-4 md:mb-0">
             &copy; 2026 MedSpace AI. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
-              HIPAA-COMPLIANT
-            </span>
-            <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
-              ISO-27001
-            </span>
-            <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-code-badge text-code-badge">
-              SOC 2 TYPE II
-            </span>
-          </div>
         </div>
       </div>
     </footer>
