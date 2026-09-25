@@ -537,16 +537,16 @@ export default function ProductsPage() {
                   <span className="font-code-badge text-[11px] text-slate block mb-1 uppercase">
                     Documentation Time Saved:
                   </span>
-                  <span className="font-code-badge text-xl font-bold text-forest-deep">
-                    {hoursSavedPerYear.toLocaleString()} <span className="text-xs font-normal text-slate">hrs/year</span>
+                  <span suppressHydrationWarning className="font-code-badge text-xl font-bold text-forest-deep">
+                    {hoursSavedPerYear.toLocaleString("en-US")} <span className="text-xs font-normal text-slate">hrs/year</span>
                   </span>
                 </div>
                 <div>
                   <span className="font-code-badge text-[11px] text-slate block mb-1 uppercase">
                     Recoverable No-Show Revenue:
                   </span>
-                  <span className="font-code-badge text-xl font-bold text-graphite">
-                    ${recoveredNoShowRevenue.toLocaleString()} <span className="text-xs font-normal text-slate">/year</span>
+                  <span suppressHydrationWarning className="font-code-badge text-xl font-bold text-graphite">
+                    ${recoveredNoShowRevenue.toLocaleString("en-US")} <span className="text-xs font-normal text-slate">/year</span>
                   </span>
                 </div>
               </div>
